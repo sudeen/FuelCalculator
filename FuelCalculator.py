@@ -54,6 +54,17 @@ def unleaded94():
     return globLitre
 
 
+# To calculate the second choice "Unleaded 91"
+def unleaded91():
+    print('You selected: Unleaded 91')
+    calculateLitre()
+    litre = globLitre
+    unleaded91 = float(float(TWO) * litre) / HUNDRED
+    print(' The cost of the fuel in AUD($):', format(unleaded91, '.2f'), 'AUD')
+    continueApp()
+    return globLitre
+
+
 # Welcome Message
 def main():
     print('==================================================')
@@ -65,7 +76,7 @@ def main():
     print('3. Unleaded 95')
     print('4. Super Unleaded 98')
     print('5. LPG')
-    print('6. Disel')
+    print('6. Diesel')
 
     y = input('Please select the fuel type you would like to calculate the cost for (1-6):')
     y = int(y)
@@ -73,19 +84,19 @@ def main():
     if y == 1:
         unleaded94()
 
-    # elif (y == 2):
-    #     unleaded91()
-    #
-    # elif (y == 3):
+    elif y == 2:
+        unleaded91()
+
+    # elif y == 3:
     #     unleaded95()
     #
-    # elif (y == 4):
+    # elif y == 4:
     #     superUnleaded98()
     #
-    # elif (y == 5):
+    # elif y == 5:
     #     lpg()
     #
-    # elif (y == 6):
+    # elif y == 6:
     #     disel()
 
     else:
