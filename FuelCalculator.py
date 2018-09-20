@@ -1,15 +1,22 @@
-#Constants
-ONE= 130.9
-TWO= 132.9
-THREE= 145.9
-FOUR= 153.9
-FIVE= 71.9
-SIX= 125.9
-HUNDRED= 100
-FUEL_LIST = ['lead','unlead','aaaa']
+# Constants Values
+# Constant for fuel l
+ONE = 130.9
+# Constant for fuel 2
+TWO = 132.9
+# Constant for fuel 3
+THREE = 145.9
+# Constant for fuel 4
+FOUR = 153.9
+# Constant for fuel 5
+FIVE = 71.9
+# Constant for fuel 6
+SIX = 125.9
 
-def main(FUEL_LIST):
+HUNDRED = 100
 
+
+# Welcome Message
+def main():
     print('==================================================');
     print(' Welcome to Cheap Fuel Station (CFS)');
     print('==================================================');
@@ -21,54 +28,33 @@ def main(FUEL_LIST):
     print('5. LPG');
     print('6. Disel');
 
-    y=input('Please select the fuel type you would like to calculate the cost for (1-6):')
-    y=int(y);
+    y = input('Please select the fuel type you would like to calculate the cost for (1-6):')
+    y = int(y);
 
-    if y<=6:
-        for i in range (len(FUEL_LIST)):
-            if i==1:
-                print('The fuel type you selected is:', FUEL_LIST[0]);
+    # if (y == 1):
+    #     unleaded94()
 
-            elif i==2:
-                print('The fuel type you selected is:', FUEL_LIST[1]);
+    # elif (y == 2):
+    #     unleaded91()
+    #
+    # elif (y == 3):
+    #     unleaded95()
+    #
+    # elif (y == 4):
+    #     superUnleaded98()
+    #
+    # elif (y == 5):
+    #     lpg()
+    #
+    # elif (y == 6):
+    #     disel()
 
-        litre=float(input(' Please input the volume (in litres):'))
-        if litre<=0 or litre >11000:
-            print('Invalid Litre')
-            exit();
+    else:
+        print('The input you provided is not in the range between 1 and 6')
+        print('Please select from 1 - 6')
+        print('Thank You')
+        print('---------------------------------------------------------------------------')
+        main()
 
-    if y == 1:
-        y1= float(float(ONE)*litre)/HUNDRED
-        print(' The cost of the fuel in AUD($):', format(y1, '.2f') )
 
-    elif y ==2:
-        y2= float(float(TWO)*litre)/HUNDRED
-        print(' The cost of the fuel in AUD($):', format(y2, '.2f') )
-    
-    elif y==3:
-        y3= float(float(THREE)*litre)/HUNDRED
-        print(' The cost of the fuel in AUD($):', format(y3, '.2f') )
-
-    elif y==4:
-        y4= float(float(FOUR)*litre)/HUNDRED
-        print(' The cost of the fuel in AUD($):', format(y4, '.2f') )
-
-    elif y==5:
-        y5= float(float(FIVE)*litre)/HUNDRED
-        print(' The cost of the fuel in AUD($):', format(y5, '.2f') )
-
-    elif y==6:
-        y6= float(float(SIX)*litre)/HUNDRED
-        print(' The cost of the fuel in AUD($):', format(y6, '.2f') )
-
-        print('Thanks for using CFS Fuel cost calculator!')
-        print('See you again!')
-
-    elif y>6 or y<0:
-        print('enter valid number 1-6')
-    
-   
-
-    
-
-main(FUEL_LIST)
+main()
