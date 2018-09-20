@@ -15,24 +15,63 @@ SIX = 125.9
 HUNDRED = 100
 
 
+# To ask to continue using the app or exit
+def continueApp():
+    global cont
+    cont = input('Continue [y/n]: ')
+    if cont == 'y':
+        main()
+    elif cont == 'n':
+        exit()
+
+
+# To Calculate Litre
+def calculateLitre():
+    # Made globLitre Global Variable
+    global globLitre
+    globLitre = float(input(' Please input the volume (in litres):'))
+
+    # Check if the input litre is valid or not
+    if globLitre <= 0 or globLitre > 11000:
+        print('Invalid Litre!!!')
+        print('Please Select different litre')
+        print('----------------')
+        main()
+    else:
+        return globLitre
+
+
+# To calculate the first choice "Unleaded 94 with E10"
+def unleaded94():
+    print('You selected: Unleaded 94 with E10')
+    calculateLitre()
+
+    # Assigning local variable to the global variable for further calculation
+    litre = globLitre
+    unleaded94 = float(float(ONE) * litre) / HUNDRED
+    print(' The cost of the fuel in AUD($):', format(unleaded94, '.2f'), 'AUD')
+    continueApp()
+    return globLitre
+
+
 # Welcome Message
 def main():
-    print('==================================================');
+    print('==================================================')
     print(' Welcome to Cheap Fuel Station (CFS)');
-    print('==================================================');
+    print('==================================================')
 
-    print('1. Unleaded 94 with E10');
-    print('2. Unleaded 91');
-    print('3. Unleaded 95');
-    print('4. Super Unleaded 98');
-    print('5. LPG');
-    print('6. Disel');
+    print('1. Unleaded 94 with E10')
+    print('2. Unleaded 91')
+    print('3. Unleaded 95')
+    print('4. Super Unleaded 98')
+    print('5. LPG')
+    print('6. Disel')
 
     y = input('Please select the fuel type you would like to calculate the cost for (1-6):')
-    y = int(y);
+    y = int(y)
 
-    # if (y == 1):
-    #     unleaded94()
+    if y == 1:
+        unleaded94()
 
     # elif (y == 2):
     #     unleaded91()
