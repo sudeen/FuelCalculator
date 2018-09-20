@@ -98,6 +98,17 @@ def lpg():
     return globLitre
 
 
+# To calculate the sixth choice "Disel"
+def diesel():
+    print('You selected: Disel')
+    calculateLitre()
+    litre = globLitre
+    disel = float(float(SIX) * litre) / HUNDRED
+    print(' The cost of the fuel in AUD($):', format(disel, '.2f'), 'AUD')
+    continueApp()
+    return globLitre
+
+
 # Welcome Message
 def main():
     print('==================================================')
@@ -129,8 +140,8 @@ def main():
     elif y == 5:
         lpg()
 
-    # elif y == 6:
-    #     disel()
+    elif y == 6:
+        diesel()
 
     else:
         print('The input you provided is not in the range between 1 and 6')
