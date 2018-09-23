@@ -14,6 +14,24 @@ SIX = 125.9
 
 HUNDRED = 100
 
+THREE_DOLLAR_DISCOUNT = 3
+
+SIX_DOLLAR_DISCOUNT = 6
+
+# Initially Discount is set to zero
+DISCOUNT = 0
+
+# Initially Fuel is set to zero
+FUEL = 0
+
+DISCOUNT_TEN_PERCENT = 0.1
+
+DISCOUNT_FIFTEEN_PERCENT = 0.15
+
+DISCOUNT_TWENTY_PERCENT = 0.2
+
+MAX_DISCOUNT = 26
+
 
 # To ask to continue using the app or exit
 def continueApp():
@@ -39,6 +57,22 @@ def calculateLitre():
         main()
     else:
         return globLitre
+
+
+# Discount Policy is listed here
+def check_price_and_discount(FUEL):
+    global DISCOUNT
+    if 0 < FUEL < 20:
+        DISCOUNT = 0
+    elif 20 < FUEL <= 30:
+        DISCOUNT = DISCOUNT_TEN_PERCENT * (FUEL - 20)
+    elif 30 < FUEL <= 50:
+        DISCOUNT = THREE_DOLLAR_DISCOUNT + (DISCOUNT_FIFTEEN_PERCENT * (FUEL - 30))
+    elif 50 < FUEL <= 150:
+        DISCOUNT = SIX_DOLLAR_DISCOUNT + (DISCOUNT_TWENTY_PERCENT * (FUEL - 50))
+    else:
+        DISCOUNT = MAX_DISCOUNT
+    return DISCOUNT
 
 
 # To calculate the first choice "Unleaded 94 with E10"
