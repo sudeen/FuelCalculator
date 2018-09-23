@@ -64,7 +64,6 @@ def calculateLitre():
         return global_litre
 
 
-# Print Cost of fuel function
 def print_cost(FUEL):
     dis = check_price_and_discount(FUEL)
     print('The cost of fuel in AUD($): ', format(FUEL, '.2f'))
@@ -137,7 +136,7 @@ def lpg():
     return FUEL
 
 
-# To calculate the sixth choice "Disel"
+# To calculate the sixth choice "Diesel"
 def diesel():
     print('You selected: Diesel')
     calculateLitre()
@@ -146,8 +145,7 @@ def diesel():
     return FUEL
 
 
-# Welcome Message
-def main():
+def main_menu():
     print('==================================================')
     print(' Welcome to Cheap Fuel Station (CFS)')
     print('==================================================')
@@ -158,6 +156,11 @@ def main():
     print('4. Super Unleaded 98')
     print('5. LPG')
     print('6. Diesel')
+
+
+# Welcome Message
+def main():
+    main_menu()
 
     fuel_type = input('Please select the fuel type you would like to calculate the cost for (1-6):')
 
