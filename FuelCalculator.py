@@ -114,11 +114,9 @@ def unleaded91():
 def unleaded95():
     print('You selected: Unleaded 95')
     calculateLitre()
-    litre = globLitre
-    unleaded95 = float(float(THREE) * litre) / HUNDRED
-    print(' The cost of the fuel in AUD($):', format(unleaded95, '.2f'), 'AUD')
-    continueApp()
-    return globLitre
+    FUEL = float(float(FUEL_THREE_RATE) * global_litre) / HUNDRED
+    print_cost(FUEL)
+    return FUEL
 
 
 # To calculate the fourth choice "Super Unleaded 98"
