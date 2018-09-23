@@ -30,7 +30,7 @@ DISCOUNT_FIFTEEN_PERCENT = 0.15
 
 DISCOUNT_TWENTY_PERCENT = 0.2
 
-MAX_DISCOUNT = 26
+MAX_DISCOUNT = 25
 
 
 # To ask to continue using the app or exit
