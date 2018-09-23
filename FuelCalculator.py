@@ -96,13 +96,9 @@ def check_price_and_discount(FUEL):
 def unleaded94():
     print('You selected: Unleaded 94 with E10')
     calculateLitre()
-
-    # Assigning local variable to the global variable for further calculation
-    litre = globLitre
-    unleaded94 = float(float(ONE) * litre) / HUNDRED
-    print(' The cost of the fuel in AUD($):', format(unleaded94, '.2f'), 'AUD')
-    continueApp()
-    return globLitre
+    FUEL = float(float(FUEL_ONE_RATE) * global_litre) / HUNDRED
+    print_cost(FUEL)
+    return FUEL
 
 
 # To calculate the second choice "Unleaded 91"
