@@ -34,7 +34,7 @@ MAX_DISCOUNT = 26
 
 
 # To ask to continue using the app or exit
-def continueApp():
+def continue_app():
     global continue_again
     continue_again = input('Do you want to enter fuel volume for another customer (Y/N)?: ')
     if continue_again == 'y' or continue_again == 'Y':
@@ -45,7 +45,7 @@ def continueApp():
 
 
 # To Calculate Litre
-def calculateLitre():
+def calculate_litre():
     # Made globLitre Global Variable
     global global_litre
     try:
@@ -53,7 +53,7 @@ def calculateLitre():
     except ValueError:
         print('Invalid value of litre')
         print('Please use integer as an input')
-        calculateLitre()
+        calculate_litre()
     # Check if the input litre is valid or not
     if global_litre <= 0 or global_litre > 11000:
         print('Invalid Litre!!!')
@@ -72,7 +72,7 @@ def print_cost(FUEL):
     print(' The cost of the fuel in AUD($):', format(FUEL, '.2f'), 'AUD')
     print('Thanks for using CFS Fuel cost calculator!')
     print('See you again!')
-    continueApp()
+    continue_app()
 
 
 # Discount Policy is listed here
@@ -94,7 +94,7 @@ def check_price_and_discount(FUEL):
 # To calculate the first choice "Unleaded 94 with E10"
 def unleaded94():
     print('You selected: Unleaded 94 with E10')
-    calculateLitre()
+    calculate_litre()
     FUEL = float(float(FUEL_ONE_RATE) * global_litre) / HUNDRED
     print_cost(FUEL)
     return FUEL
@@ -103,7 +103,7 @@ def unleaded94():
 # To calculate the second choice "Unleaded 91"
 def unleaded91():
     print('You selected: Unleaded 91')
-    calculateLitre()
+    calculate_litre()
     FUEL = float(float(FUEL_TWO_RATE) * global_litre) / HUNDRED
     print_cost(FUEL)
     return FUEL
@@ -112,7 +112,7 @@ def unleaded91():
 # To calculate the third choice "Unleaded 95"
 def unleaded95():
     print('You selected: Unleaded 95')
-    calculateLitre()
+    calculate_litre()
     FUEL = float(float(FUEL_THREE_RATE) * global_litre) / HUNDRED
     print_cost(FUEL)
     return FUEL
@@ -121,7 +121,7 @@ def unleaded95():
 # To calculate the fourth choice "Super Unleaded 98"
 def superUnleaded98():
     print('You selected: Super Unleaded 98')
-    calculateLitre()
+    calculate_litre()
     FUEL = float(float(FUEL_FOUR_RATE) * global_litre) / HUNDRED
     print_cost(FUEL)
     return FUEL
@@ -130,7 +130,7 @@ def superUnleaded98():
 # To calculate the fifth choice "LPG"
 def lpg():
     print('You selected: LPG')
-    calculateLitre()
+    calculate_litre()
     FUEL = float(float(FUEL_FIVE_RATE) * global_litre) / HUNDRED
     print_cost(FUEL)
     return FUEL
@@ -139,7 +139,7 @@ def lpg():
 # To calculate the sixth choice "Diesel"
 def diesel():
     print('You selected: Diesel')
-    calculateLitre()
+    calculate_litre()
     FUEL = float(float(FUEL_SIX_RATE) * global_litre) / HUNDRED
     print_cost(FUEL)
     return FUEL
