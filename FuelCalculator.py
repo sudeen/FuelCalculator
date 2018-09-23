@@ -59,6 +59,18 @@ def calculateLitre():
         return globLitre
 
 
+# Print Cost of fuel function
+def print_cost(FUEL):
+    dis = check_price_and_discount(FUEL)
+    print('The cost of fuel in AUD($): ', format(FUEL, '.2f'))
+    FUEL -= dis
+    print('Your saving in this purchase is AUD($): ', format(dis, '.2f'))
+    print(' The cost of the fuel in AUD($):', format(FUEL, '.2f'), 'AUD')
+    print('Thanks for using CFS Fuel cost calculator!')
+    print('See you again!')
+    continueApp()
+
+
 # Discount Policy is listed here
 def check_price_and_discount(FUEL):
     global DISCOUNT
