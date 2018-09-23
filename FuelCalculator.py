@@ -112,7 +112,7 @@ def diesel():
 # Welcome Message
 def main():
     print('==================================================')
-    print(' Welcome to Cheap Fuel Station (CFS)');
+    print(' Welcome to Cheap Fuel Station (CFS)')
     print('==================================================')
 
     print('1. Unleaded 94 with E10')
@@ -122,25 +122,31 @@ def main():
     print('5. LPG')
     print('6. Diesel')
 
-    y = input('Please select the fuel type you would like to calculate the cost for (1-6):')
-    y = int(y)
+    fuel_type = input('Please select the fuel type you would like to calculate the cost for (1-6):')
 
-    if y == 1:
+    try:
+        user_input = int(fuel_type)
+
+    except ValueError:
+        print('\nYou did not enter a valid integer')
+        print('Please user integer as an input, select from 1 - 6')
+        main()
+
+    if user_input == 1:
         unleaded94()
-
-    elif y == 2:
+    elif user_input == 2:
         unleaded91()
 
-    elif y == 3:
+    elif user_input == 3:
         unleaded95()
 
-    elif y == 4:
+    elif user_input == 4:
         superUnleaded98()
 
-    elif y == 5:
+    elif user_input == 5:
         lpg()
 
-    elif y == 6:
+    elif user_input == 6:
         diesel()
 
     else:
