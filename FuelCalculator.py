@@ -35,11 +35,12 @@ MAX_DISCOUNT = 26
 
 # To ask to continue using the app or exit
 def continueApp():
-    global cont
-    cont = input('Continue [y/n]: ')
-    if cont == 'y':
+    global continue_again
+    continue_again = input('Do you want to enter fuel volume for another customer (Y/N)?: ')
+    if continue_again == 'y' or continue_again == 'Y':
         main()
-    elif cont == 'n':
+    elif continue_again == 'n':
+        print('See you again!')
         exit()
 
 
