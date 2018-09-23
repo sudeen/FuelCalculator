@@ -1,16 +1,16 @@
 # Constants Values
-# Constant for fuel l
-ONE = 130.9
-# Constant for fuel 2
-TWO = 132.9
-# Constant for fuel 3
-THREE = 145.9
-# Constant for fuel 4
-FOUR = 153.9
-# Constant for fuel 5
-FIVE = 71.9
-# Constant for fuel 6
-SIX = 125.9
+# Constant price for fuel l
+FUEL_ONE_RATE = 130.9
+# Constant price for fuel 2
+FUEL_TWO_RATE = 132.9
+# Constant price for fuel 3
+FUEL_THREE_RATE = 145.9
+# Constant price for fuel 4
+FUEL_FOUR_RATE = 153.9
+# Constant price for fuel 5
+FUEL_FIVE_RATE = 71.9
+# Constant price for fuel 6
+FUEL_SIX_RATE = 125.9
 
 HUNDRED = 100
 
