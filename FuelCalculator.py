@@ -46,17 +46,21 @@ def continueApp():
 # To Calculate Litre
 def calculateLitre():
     # Made globLitre Global Variable
-    global globLitre
-    globLitre = float(input(' Please input the volume (in litres):'))
-
+    global global_litre
+    try:
+        global_litre = float(input(' Please input the volume (in litres):'))
+    except ValueError:
+        print('Invalid value of litre')
+        print('Please use integer as an input')
+        calculateLitre()
     # Check if the input litre is valid or not
-    if globLitre <= 0 or globLitre > 11000:
+    if global_litre <= 0 or global_litre > 11000:
         print('Invalid Litre!!!')
         print('Please Select different litre')
-        print('----------------')
+        print('********************************************')
         main()
     else:
-        return globLitre
+        return global_litre
 
 
 # Print Cost of fuel function
