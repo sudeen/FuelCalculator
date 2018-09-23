@@ -139,13 +139,11 @@ def lpg():
 
 # To calculate the sixth choice "Disel"
 def diesel():
-    print('You selected: Disel')
+    print('You selected: Diesel')
     calculateLitre()
-    litre = globLitre
-    disel = float(float(SIX) * litre) / HUNDRED
-    print(' The cost of the fuel in AUD($):', format(disel, '.2f'), 'AUD')
-    continueApp()
-    return globLitre
+    FUEL = float(float(FUEL_SIX_RATE) * global_litre) / HUNDRED
+    print_cost(FUEL)
+    return FUEL
 
 
 # Welcome Message
